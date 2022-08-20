@@ -12,7 +12,7 @@ This is a personal blog website. People who want to publish their own blogs can 
 
 [Our Demo Website](https://territory-blog.web.app)
 
-[Demo Video]()
+[Demo Video](https://www.youtube.com/watch?v=k6i4t6op-vQ&t=32s)
 
 
 
