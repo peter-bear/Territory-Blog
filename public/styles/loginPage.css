@@ -1,0 +1,140 @@
+.page-container {
+    margin-top: 0;
+}
+
+#LoginTitle{
+    font-family: 'Tillana';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 66px;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* width: 300px; */
+    margin: auto;
+    margin-top: 250px;
+    text-align: center;
+}
+
+#loginContainer{
+    width: 900px;
+    height: 400px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+#banner-box{
+    height: 100%;
+    background: url('../images/Login_Background.jpg') no-repeat;
+    background-size: 100%;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+#login-box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1), 0px 8px 53px rgba(0, 120, 240, 0.25);
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+#profile-Icon{
+    top: -32px;
+    right:-32px;
+}
+
+#login-box-title{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 31px;
+    color: rgba(0, 120, 240, 0.5);
+    text-align: center;
+}
+
+#RoseFire{
+    background-color: #800000;
+    width: 220px;
+    height: 40px;
+    text-align: left;
+    text-transform: none;
+    color: white;
+}
+
+#canvas{
+    height: 400px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: white;
+}
+
+@media (max-width: 991.98px) {
+    #loginContainer{
+        width: 700px;
+    } 
+
+}
+
+
+
+@media (max-width: 767.98px) {
+    #loginContainer{
+        width: 400px;
+      
+    } 
+
+    #profile-Icon{
+        right: 42%;
+    }
+
+    #banner-box{
+        display: none;
+    }
+
+    #login-box{
+        border-radius: 10px;
+    }
+
+ }
+
+ @media (max-width: 575.98px) {
+    #LoginTitle{
+        margin-top: 50px;
+    }
+
+    #loginContainer{
+        width: 250px;
+        margin-top: 50px;
+    }
+    
+    #profile-Icon{
+        right: 36%;
+    }
+
+    #login-box{
+        width: 250px;
+    }
+
+    #RoseFire{
+        width: 202px;
+    }
+
+ 
+ }

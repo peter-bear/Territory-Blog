@@ -1,0 +1,678 @@
+/* Main Page CSS */
+.container{
+    text-align: center;
+
+}
+
+#cover{
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    overflow: hidden;
+    background-image: url('../images/Main-index-default.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 1.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+#Index-article{
+    position: absolute;
+    font-style: normal;
+    color: #FFFFFF;
+    left: 250px;
+    top: 400px;
+    cursor: pointer;
+}
+
+/* #Index-article:hover + #cover{
+    background-size: 140%;
+} */
+
+#Index-date{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+
+}
+
+#Index-title{
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 49px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+
+#Index-content{
+    width: 457px;
+    margin-top: 10px;
+
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 41px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+   
+} 
+
+#mainPage{
+    transition: opacity 1.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+#mainPage .card{
+    display: inline-block;
+    width: 80%;
+    text-align: left;
+}
+
+#mainPage .list-Title{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    color: #333333;
+
+
+}
+
+#mainPage .list-Content{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    color: #555555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#mainPage .list-Date{
+    position: absolute;
+    font-size: 17px;
+}
+
+
+
+.vl {
+    border-left: 1px solid rgba(128, 128, 128, 0.6);
+    height: 35px;
+    margin-left: 50%;
+    width: 0;
+}
+
+#seeMoreBtn, #backTopBtn{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: rgba(202, 198, 198, 0.6);
+    border-radius: 5px;
+    font-family: 'Content';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    align-items: center;
+    color: #AAAAAA;
+
+
+}
+
+/* Search Page CSS */
+#searchPage{
+    transition: opacity 1.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+
+#search-background-image {
+    margin-top: 150px;
+    text-align: center;
+}
+
+#search-background-image img{
+    width: 30%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 5px;
+}
+
+#searchPage .form-control {
+    background-image: none;
+    display: block;
+    margin: 30px auto;
+    margin-top: 100px;
+    width: 40%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: 0.75rem 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #F0EFEF;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .4rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    text-align: center;
+}
+
+#searchPage .form-control:focus {
+    background-image: none;
+    color: #495057;
+    background-color: #F0EFEF;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+#searchStartBtn{
+    position: absolute;
+    padding: 0;
+    padding-top: 4px;
+    margin: 0;
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    color:#C6DCE4;
+    border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    top:5px;
+    right: 31%;
+}
+
+/* Hidden Page CSS */
+
+#hiddenPage{
+    position: relative;
+    margin: auto auto;
+    margin-top: 15vh;
+    width: 85%;
+    height: 80vh;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid rgba(170, 170, 170, 0.8);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: opacity 1.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+
+#profile-Icon{
+    height: 96px;
+    width: 96px;
+    top: -48px;
+    left:-48px;
+}
+
+#loginLabel{
+    font-size: 20px;
+    position: absolute;
+    top: -100px;
+    right: 0px;
+}
+
+#loginLabel label{
+    transform: scale(2);
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    border: solid 1px #ddd;
+    position: relative;
+    margin-top: 30px;
+    margin-left: 30px;
+    background-color: #ddd;
+    overflow: hidden;
+}
+
+
+#loginBtn{
+    visibility: hidden;
+}
+
+
+#loginBtn::after{
+    content:'';
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    visibility: visible;
+    left: 1px;
+    top: 1px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+#loginBtn:checked::after{
+    transform: translateX(20px); 
+    cursor: pointer;
+}
+
+
+#loginBtn::before{
+    content:'';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: visible;
+    left: 0px;
+    top: 0px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+
+#loginBtn:checked::before{
+    background-color: #34C759;
+}
+
+#linkEntry{
+    margin-top: 100px;
+    text-align: center;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 80px;
+    color: #000000;
+    margin-left: 20px;
+    margin-right: 20px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#fab-add, #fab-edit{
+    background-color: #B3E8E5;
+    color: white;
+    position: absolute;
+    bottom: 10vh;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+#fab-add i, #fab-edit i{
+    font-size: 26px;
+}
+
+
+#fab-add{
+    left: 38%;
+}
+
+#fab-edit{
+    right: 38%;
+}
+
+#slogan{
+    margin: 15vh auto;
+    text-align: center;
+    font-size: 50px;
+    color: #808080;
+    font-style: italic;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#showAllTags, #showProfile, #showAboutUs{
+    cursor: pointer;
+}
+
+
+/* Category Page CSS */
+
+#categoryPage{
+    margin-top: 20vh;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: opacity 1.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.tag-title, .tag-num{
+    cursor: pointer;
+}
+
+.tag-title{
+    color: #ACDAEB;
+}
+
+.tag-num{
+    color: #AAAAAA;
+}
+
+
+
+/* Search Result Page CSS */
+
+#searchResult{
+    margin-top: 10vh;
+    transition: opacity 1.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+#searchResult .card-body{
+    cursor: pointer;
+}
+
+#searchResult .row{
+    justify-content: center;
+}
+
+#searchResult .card{
+    margin: 30px 15px;
+    padding: 0;
+}
+
+#searchResult .list-Title{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #333333;
+}
+
+#searchResult .list-Content{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #555555;
+}
+
+#searchResult span{
+    margin-top: 25px;
+}
+
+
+#searchResult .article-tag{
+    margin-top: 20px;
+}
+
+#searchResult .bmd-btn-fab.custom-file-control:before, #searchResult .btn.bmd-btn-fab{
+    width: 2rem;
+    height: 2rem;
+    min-width: 2rem;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: #D9D9D9;
+    color: #AAAAAA;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#searchTitle{
+    text-align: center;
+    background-color: #B3E8E5;
+    color: white;
+    /* width: 200px; */
+    margin: 0 auto;
+    font-size: 2rem;
+    border-radius: 10px;
+}
+
+.deleteBtn{
+    display: none;
+}
+
+#loginAlert .modal-content{
+    background-color: #000000;
+    color: white;
+}
+
+
+#loginAlert .modal-body{
+    text-align: center;
+}
+
+#loginAlert .modal-body span{
+    display: block;
+    font-size: 24px;
+}
+
+/* Setting Page CSS */
+#profilePage{
+    margin-top: 100px;
+    min-width: 320px;
+}
+
+#profilePage #profile-Icon{
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+
+#profilePage .material-icons{
+    color:#673AB7;
+    cursor: pointer;
+}
+
+#profilePage .profileLabel{
+    margin-left: 10px;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: #000000;
+}
+
+#profilePage #profileUsername{
+    font-style: oblique;
+    font-weight: 550;
+    font-size: 25px;
+    line-height: 41px;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+#profilePage #profileSlogan{
+    text-align: center;
+    font-size: 20px;
+    color: #808080;
+    font-style: italic;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#profilePage #profileTitle{
+    font-weight: 550;
+    font-size: 35px;
+    line-height: 55px;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#profilePage .modal-header{
+    display: block;
+}
+
+#profilePage #profileSaveBtn{
+    font-size: 20px;
+    color:white;
+    background-color: #B3E8E5;
+    border-radius: 5px;
+}
+
+@media (min-width: 768px){
+    #profilePage{
+        width: 40rem;
+    }
+}
+
+
+@media (max-width: 767.98px) {
+    #cover{
+        background-position: -250px, 0;
+    }
+
+    #Index-article{
+        left: 100px;
+        top: 574px;
+    }
+
+    #mainPage .article-tag{
+        display: none;
+    }
+
+    #search-background-image img{
+        width: 60%;
+    }
+
+    #searchPage .form-control {
+        margin-top: 60px;
+        width: 70%;
+    }
+
+    #searchStartBtn{
+        right: 20%;
+    }
+
+    #hiddenPage{
+        width: 80%;
+    }
+
+    #fab-add{
+        left: 20%;
+    }
+    
+    #fab-edit{
+        right: 20%;
+    }
+
+    #slogan{
+        font-size: 30px;
+    }
+ }
+
+ @media (max-width: 576px){
+    #cover{
+        background-position: -430px, -193px;
+    }
+
+    #Index-article{
+        left: 80px;
+        top: 300px;
+    }
+
+    #Index-date{
+        font-size: 15px;
+        line-height: 30px;
+    } 
+
+    #Index-title{
+        font-size: 25px;
+        line-height: 30px;
+    } 
+
+    #Index-content{
+        font-size: 20px;
+        line-height: 30px;
+        width: 340px;
+        text-align: left;
+    } 
+
+    #mainPage .list-Title{
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    #mainPage .list-Content{
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    #profile-Icon{
+        height: 64px;
+        width: 64px;
+        top: -32px;
+        left:-32px;
+    }
+
+    #hiddenPage{
+        width: 70%;
+    }
+
+    #loginLabel{
+        top: 50px;
+        left: 15%;
+    }
+
+    #loginLabel br{
+        display: none;
+    }
+
+    #loginLabel label{
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 35px;
+        height: 18px;
+        top: 0;
+        
+    }
+
+    #loginBtn::after{
+        width: 14px;
+        height: 14px; 
+    }
+
+    #loginBtn:checked::after{
+        transform: translateX(17px); 
+    }
+
+    #linkEntry{
+        font-size: 20px;
+    }
+
+    
+    #slogan{
+        margin-top: 2vh;
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 450px){
+    #Index-article{
+        left: 40px;
+        top: 250px;
+    }
+
+    #Index-content{
+        font-size: 20px;
+        line-height: 30px;
+        width: 320px;
+    } 
+    
+}
+
+@media (max-width: 360px){
+    #Index-article{
+        left: 40px;
+        top: 250px;
+    }
+
+    #Index-content{
+        font-size: 20px;
+        line-height: 30px;
+        width: 240px;
+    }
+
+    #mainPage .list-Date{
+        font-size: 14px;
+    } 
+
+    .article-tag{
+        left: 130px;
+    }
+}

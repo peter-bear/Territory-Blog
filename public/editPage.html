@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="./styles/codeHighLight/styles/a11y-light.min.css">
+  <link rel="stylesheet" href="styles/editPage.css">
+  <title>Territory Editor</title>
+</head>
+
+<body>
+  <div id="editPage" class="container page-container">
+    <div style="text-align:center; font-size:40px;font-weight: bold;" class="my-3">Teritory Editor</div>
+    <div id="operations">
+      <button id="set_blod" class = "btn btn-light"><blod>B</blod></button>
+      <button id="set_italic" class = "btn btn-light"><i>I</i></button>
+      <button id="set_underline" class = "btn btn-light"><u>U</u></button>
+
+      <span class = "vgap">&nbsp;|&nbsp;</span>
+
+      <button id="text_left" class = "btn" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-text-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+      </svg></button>
+
+      <button id="text_center" class = "btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-text-center" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+      </svg></button>
+
+      <button id="text_right" class = "btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-text-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+      </svg></button>
+
+      <span class="vgap">&nbsp;|&nbsp;</span>
+
+      <input type="file" id="uploadImage" accept="image/*" hidden>
+      <button id="uploadImageBtn" class = "btn"><span class="material-icons">image</span></button>
+      
+      <button id="codeHighLightBtn" class = "btn" data-toggle="modal" data-target="#newCodeModal"><span class="material-icons">code</span></button> 
+      <span class="vgap">&nbsp;|&nbsp;</span>
+
+      <div style="display: inline-block; margin-bottom:5px">
+        <select id="set_font_size" style="border: 1px solid;">
+          <option value="null">&nbsp;Size&nbsp;</option>
+          <option value="1">&nbsp;1&nbsp;</option>
+          <option value="2">&nbsp;2&nbsp;</option>
+          <option value="3">&nbsp;3&nbsp;</option>
+          <option value="4">&nbsp;4&nbsp;</option>
+          <option value="5">&nbsp;5&nbsp;</option>
+          <option value="6">&nbsp;6&nbsp;</option>
+          <option value="7">&nbsp;7&nbsp;</option>
+          <option value="8">&nbsp;8&nbsp;</option>
+        </select>
+  
+        
+        <select id="set_font_name"style="border: 1px solid;">
+          <option value="null">&nbsp;Font&nbsp;</option>
+          <option value="Arial">&nbsp;Arial&nbsp;</option>
+          <option value="Times New Roman">&nbsp;Times New Roman&nbsp;</option>
+          <option value="Calibri">&nbsp;Calibri&nbsp;</option>
+          <option value="Futura">&nbsp;Futura&nbsp;</option>
+          <option value="Garamond">&nbsp;Garamond&nbsp;</option>
+        </select>
+  
+        <select id="set_font_color"style="border: 1px solid;">
+          <option value="null">&nbsp;Color&nbsp;</option>
+          <option value="black">&nbsp;Black&nbsp;</option>
+          <option value="red">&nbsp;Red&nbsp;</option>
+          <option value="yellow">&nbsp;Yellow&nbsp;</option>
+          <option value="Blue">&nbsp;Blue&nbsp;</option>
+        </select>
+      </div>
+    </div>
+
+    <br>
+
+    <input id="territoryTitle" placeholder="Title">
+
+    <br>
+    <br>
+
+    <textarea id="territoryPreviewContent" placeholder="Preview Content"></textarea>
+
+
+    <br>
+    <br>
+
+    <span>Main Content: </span>
+    <div id="territoryEditor" contenteditable="true">
+      
+    </div>
+
+    <br>
+    <br>
+
+
+    <div>
+      <p style="float: left;">Cover</p>
+      <p style="float: right;">It is not required</p>
+      <br>
+      <br>
+      <div class = "d-flex align-items-center justify-content-center">
+
+        <div id="cover_container">
+          <img src="./images/Main-index-default.jpg" alt="cover image" hidden>
+        </div>
+
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <input type="file" id="uploadCover" accept="image/*" hidden>
+        <div id="uploadCoverBtn" class = "d-flex align-items-center justify-content-center">
+          <button class="btn" style="height: 100px; width: 160px;"><i class="material-icons">add</i></button>
+        </div>
+
+      </div>
+
+      <br>
+      <br>
+
+      <p style="float: left;">Tag</p>
+      <p style="float: right;">Required</p>
+      <br>
+      <br>
+      <div class = "d-flex align-items-center justify-content-center">
+        <div class = "border border-secondary" style="padding: 10px 10px 10px 10px;">
+          <div class="mx-auto" id="addNewTagBtn"  data-toggle="modal" data-target="#newTagModal">
+            Add New Tag
+          </div>
+
+          <hr>
+          <div id="tags">
+          
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <br>
+
+      <p>Music</p>
+      <p style="float: right;">It is not required</p>
+      <input type="file" id="uploadMusic" accept="audio/*" hidden>
+      <div style="text-align: center;" class="mb-1">
+        <audio id="viewMusic" src="./music/水谷広実 - 優しい風.flac" controls></audio>
+      </div>
+      <div class="d-flex justify-content-center">
+        <button class="btn btn-action" id="uploadMusicBtn" style="border-radius:5px; background-color: #ACDAEB; color:white"> Upload Music</button>
+      </div>
+
+      <br>
+      <p>Date</p>
+      <p style="float: right;">Required</p>
+      <div style="text-align:center;"><input type="date" style="text-align: center;" id="inputDate"></div>
+      
+  
+      <br>
+      <br>
+      
+      <div class="d-flex justify-content-center">
+        <button id="cancelCreateBtn" class="btn btn-action" style="border-radius:5px; background-color: #C6DCE4; color: white;">CANCEL</button>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <button id="saveArticleBtn" class="btn btn-action" style="border-radius:5px; background-color: #C6DCE4; color: white;">SAVE</button>
+      </div>
+
+ 
+    </div>
+  </div>
+
+
+<!-- Code Modal -->
+<div class="modal fade" id="newCodeModal" tabindex="-1" role="dialog" aria-labelledby="newCodeModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">New Code Block</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre style="position:relative">
+          <code  class="mx-auto" contenteditable="true">Put Code Here</code>
+          <input style="float:left" type="text" placeholder="programing language">
+        </pre>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" id="addNewCodeBlock"  data-dismiss="modal" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tag Modal -->
+<div class="modal fade" id="newTagModal" tabindex="-1" role="dialog" aria-labelledby="newTagModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">New Tag Name</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Tag Name:</span>
+          </div>
+          <input type="text" id="newTagName" class="form-control" style="padding-left: 5px;" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" id="submitNewTagName"  data-dismiss="modal" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/popper.js"></script>
+<script src="scripts/bootstrap-material-design.js"></script>
+<script src="./styles/codeHighLight/highlight.min.js"></script>
+<script>$("body").bootstrapMaterialDesign();</script>
+<script src="/__/firebase/7.18.0/firebase-app.js"></script>
+<script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+<script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+<script src="/__/firebase/7.18.0/firebase-storage.js"></script>
+<script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+<script src="/__/firebase/init.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="scripts/main.js"></script>
+
+</body>
+
+</html>

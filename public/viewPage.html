@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+  <link rel="stylesheet" href="./styles/codeHighLight/styles/a11y-light.min.css">
+  <link rel="stylesheet" href="styles/shared.css">
+  <link rel="stylesheet" href="styles/viewPage.css">
+  
+  
+  <title>View Page</title>
+</head>
+  
+<body>
+  <nav class="navbar navbar-dark fixed-top">
+    <span id="music_play" class="material-icons">play_arrow</span>
+    <span id="music_pause" class="material-icons" style="display: none;">pause</span>
+    <audio id="music_file" preload="auto" src="./music/水谷広実 - 優しい風.flac" type="audio/flac" loop></audio>
+    <button id="shareBtn" onclick="shareWithOther()" type="button" class="btn btn-primary"><span class="material-icons">share</span></button>
+  </nav>
+
+  <div id="viewPage">
+    <div>
+        <a id="territoryLink" href="/">Territory</a>
+        <div id="dateContainer">
+            <span class="material-icons">calendar_today</span>
+            <span class="article-Date"></span>
+        </div>
+       
+    </div>
+    <div class="container page-container">     
+        <div id="article-Cover">
+
+            <img src="" alt="cover image">
+        </div>
+
+        <div id="article-title">Loading Article</div>
+
+        <div id="article-tags">
+
+        </div>
+
+        <div id="article-content">
+        
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <button id="show-Comment-Btn" type="button" class="btn btn-primary btn-action">Comment</button>
+        </div>
+
+        <div id="comment-area">
+            <textarea class="form-control" placeholder="put your comments here" autofocus></textarea>
+            <div style="text-align: end; margin-bottom: 30px;">
+                <button id="add-Comment-Btn" type="button" class="btn btn-primary btn-action">Publish</button>
+            </div>
+
+            <div id="comments">
+
+            </div>
+            
+        </div>
+    </div>
+  </div>
+
+
+
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script src="./styles/codeHighLight/highlight.min.js"></script>
+  <script>$("body").bootstrapMaterialDesign();</script>
+  <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="./live2d-widget-master/autoload.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

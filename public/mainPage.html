@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+  <link rel="stylesheet" href="styles/shared.css">
+  <link rel="stylesheet" href="styles/mainPage.css">
+  
+  
+  <title>Main Page</title>
+</head>
+  
+<body>
+  <nav id="myNav" class="navbar navbar-dark fixed-top">
+    <a id="territoryLink" href="/">Territory</a>
+    <button id="searchBtn" type="button" class="btn btn-primary"><span class="material-icons">search</span></button>
+    <button id="menuBtn" type="button" class="btn btn-primary"><span class="material-icons">menu</span></button>
+    <button id="closeBtn" type="button" class="btn btn-primary"><span class="material-icons">close</span></button>
+  </nav>
+
+  <div id="mainPage">
+    <svg id="cover">
+      <polygon points="0,0 800,0 2560,1600 0,2560 "
+      style="fill:rgba(170, 170, 170, 0.5);" />
+    </svg>
+    
+    <div id="Index-article">
+      <div id="Index-date">June 06, 2022</div>
+      <i id="Index-title">Hello World</i>
+      <div id="Index-content">A "Hello, world!" program is generally a computer program that outputs or displays the message "Hello, world!". </div>
+    </div>
+
+
+    <div class="container page-container" id="mainPage-card-list">     
+
+    </div>
+  </div>
+
+  <div id="searchPage">
+    <div id="search-background-image">
+      <img src="./images/search-page-background.png" alt="search-page-background">
+    </div>
+
+    <div style="position: relative;">
+      <input type="url" style="margin-bottom: 25px;" class="form-control" id="inputSearch" aria-describedby="search input" placeholder="Search ? Here !!" autofocus >
+      <button id="searchStartBtn" type="button" class="btn btn-primary"><span class="material-icons">search</span></button>
+    </div>
+  </div>
+
+  <div id="searchResult">
+    <div id="searchTitle">
+      Search
+    </div>
+
+    <div class="row" id="searchResultRow">
+
+    </div>
+  </div>
+
+  <div id="hiddenPage">
+    <img id="profile-Icon" src="./images/Default_Profile_Icon.webp" alt="profile icon">
+    <div id="loginLabel">
+      Login Status<br>
+      <label>
+        <input type="checkbox" id="loginBtn">
+      </label>
+    </div>
+    <div class="row" id="linkEntry">
+      <div class="col-6 col-md-4" id="showAllTags">Tags</div>
+      <div class="col-6 col-md-4" id="showProfile">Settings</div>
+      <div class="col-12 col-md-4" id="showAboutUs">About Us</div>
+    </div>
+
+    <div id="slogan">
+      Veni, vidi, vici ----Julius Caesar
+    </div>
+
+    <button type="button" id ="fab-add" class="btn bmd-btn-fab btn-action">
+      <i class="material-icons">add</i>
+    </button>
+
+    <button type="button" id ="fab-edit" class="btn bmd-btn-fab btn-action">
+      <i class="material-icons">edit</i>
+    </button>
+  </div>
+
+  <div id="categoryPage">
+    <div id="categories">
+
+    </div>
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="loginAlert" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginAlertLabel">Please Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="color:white">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="./images/please_click_here.png" alt="Please Click Here" width="200px">
+          <span>Please Click Login Button!</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" style="color: white;" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>$("body").bootstrapMaterialDesign();</script>
+  <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-storage.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="./live2d-widget-master/autoload.js"></script>
+
+
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

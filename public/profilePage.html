@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="./styles/mainPage.css">
+
+    <title>Territory Profile Page</title>
+    
+</head>
+<body>
+    <div id="profilePage" class="container page-container">
+        <div id="profileTitle" class="mb-5">Profile Page</div>
+        <div class="card">
+            <div class="card-body">
+           
+                <div class="text-left ml-1 mt-1">
+                    <span data-toggle="modal" data-target="#editProfileIcon" class="material-icons">edit</span><span class="profileLabel">Icon:</span>
+                </div>
+                <div class="text-right mr-3 mt-1">
+                    <img id="profile-Icon" src="./images/Default_Profile_Icon.webp" alt="default profile icon">
+                </div>
+        
+                <div class="text-left ml-1 mt-1">
+                    <span data-toggle="modal" data-target="#editProfileUsername" class="material-icons">edit</span><span class="profileLabel">Username:</span> 
+                </div>
+                <div class="text-right mr-3 mt-1">
+                    <span id="profileUsername">Territory</span>
+                </div>
+        
+                <div class="text-left ml-1 mt-1">
+                    <span data-toggle="modal" data-target="#editProfileSlogan"  class="material-icons">edit</span><span class="profileLabel">Slogan:</span>
+                </div>
+
+                <div class="text-right mr-3 mt-1">
+                    <span id="profileSlogan">Veni, vidi, vici ----Julius Caesar</span>
+                </div>
+             
+            </div>
+        </div>
+
+        <button type="button" id="profileSaveBtn" class="btn btn-primary mt-4" data-toggle="modal" data-target="#saveProfile">
+            SAVE
+        </button>
+        
+        <!-- new user alert -->
+        <div class="modal fade" id="newUserAlert" tabindex="-1" role="dialog" aria-labelledby="newUserAlert" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" style="text-align:center;">Hi, New User!<br>Welcome to Territory Blog</h4>
+                  
+                </div>
+                <div class="modal-body">
+                  <span>Please Set Up Your Profile Page</span>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary mx-auto" data-dismiss="modal">OK</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- SAVE profile page-->
+        <div class="modal fade" id="saveProfile"  data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="saveProfile" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="text-align:center;">Profile Saved</h4>
+                </div>
+                <div class="modal-body">
+                    <span>If you want to learn more about how to use Territory Blog, please read our instruction article!</span>
+                    <img src="./images/profilePage_Instruction.png" alt="">
+                </div>
+                <div class="modal-footer">
+                  <button id="submitProfilePage" type="button" class="btn btn-primary mx-auto" data-dismiss="modal">GOT IT</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+         <!-- Edit Profile Icon -->
+         <div class="modal fade" id="editProfileIcon" tabindex="-1" role="dialog" aria-labelledby="Edit Profile Icon" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Icon</h5>
+                </div>
+                <div class="modal-body">
+                    <button id="uploadImageBtn" type="button" class="btn btn-primary mx-auto" style="background-color: #B3E8E5;border-radius:10px; color:white">
+                        <span class="material-icons" style="color:white">file_upload</span>
+                        <span style="font-size: 24px;">UPLOAD IMAGE</span>
+                    </button>
+                    <input type="file" class="form-control-file" id="inputProfileIconFile" accept="image/*" hidden>               
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+                    <button id="saveProfileIcon" type="button" class="btn btn-primary" data-dismiss="modal">SAVE</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Edit Profile Username -->
+        <div class="modal fade" id="editProfileUsername" tabindex="-1" role="dialog" aria-labelledby="Edit Profile Username" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Username</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group bmd-form-group"> 
+                        <label for="inputProfileUsername">Username</label>
+                        <input type="text" class="form-control" id="inputProfileUsername" placeholder="Territory">
+                    </div>                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+                    <button id="saveProfileUsername" type="button" class="btn btn-primary" data-dismiss="modal">SAVE</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Edit Profile Slogan -->
+        <div class="modal fade" id="editProfileSlogan" tabindex="-1" role="dialog" aria-labelledby="Edit Profile Slogan" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Slogan</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group bmd-form-group"> 
+                        <label for="inputProfileSlogan">Slogan</label>
+                        <input type="text" class="form-control" id="inputProfileSlogan" placeholder="Veni, vidi, vici ----Julius Caesar">
+                    </div>                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+                    <button id="saveProfileSlogan" type="button" class="btn btn-primary" data-dismiss="modal">SAVE</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/popper.js"></script>
+    <script src="scripts/bootstrap-material-design.js"></script>
+    <script>$("body").bootstrapMaterialDesign();</script>
+    <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-storage.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

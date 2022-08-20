@@ -1,0 +1,153 @@
+body{
+    font-family: 'PingFang SC','Hiragino Sans GB','Microsoft Yahei','WenQuanYi Micro Hei',sans-serif;
+    min-width: 360px;
+}
+
+pre code.hljs{
+    background-color: antiquewhite;
+    padding: 2px 5px;
+    width: 90%;
+}
+
+
+pre code.hljs:focus{
+    outline: none !important;
+    border:none;
+    
+    box-shadow: 0px 5px 5px rgb(200, 200, 200);
+}
+
+.navbar{
+    box-shadow: none;
+    min-width: 360px;
+}
+
+.page-container {
+    margin-top: 75px;
+    min-width: 360px;
+}
+
+#profile-Icon{
+    height: 64px;
+    width: 64px;
+    position: absolute;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    z-index: 3;
+
+}
+
+#territoryLink{
+    margin-left: 20px;
+    font-style: oblique;
+    font-weight: 550;
+    font-size: 25px;
+    line-height: 41px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    /* color: black; */
+}
+
+
+#myNav{
+    margin-top: 10px;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    background-color: transparent;
+}
+
+#searchBtn, #menuBtn, #closeBtn{
+    position: absolute;
+    padding: 0;
+    padding-top: 4px;
+    margin: 0;
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    color:#C6DCE4;
+    border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+
+#searchBtn{
+    right: 70px;
+}
+
+#menuBtn{
+    right: 20px;
+}
+
+#closeBtn{
+    right: 20px;
+}
+
+.article-tag{
+    color: #FFFFFF;
+    background-color: #92B4EC;
+    float: right;
+    padding:0 3px;
+    border-radius: 3px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-right: 10px;
+
+}
+
+.btn-action:active{
+    transform: translateY(2px);
+    opacity: 0.8;
+}
+
+.card{
+    cursor: pointer;
+}
+
+@media (max-width: 991.98px) {
+    #waifu{
+        display: block;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #waifu{
+        display: none;
+    }
+}
+
+/* #mainPage{
+    display: none;
+} */
+
+#closeBtn{
+    display: none;
+}
+
+#searchPage{
+    display: none;
+}
+
+#hiddenPage{
+    display: none;
+}
+
+#categoryPage{
+    display: none;
+}
+
+#searchResult{
+    display: none;
+}
+
+/* #show-Comment-Btn{
+    display: none;
+} */
+
+#comment-area{
+    display: none;
+}

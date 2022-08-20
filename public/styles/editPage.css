@@ -1,0 +1,125 @@
+body {
+    background: rgb(255, 255, 255);
+    min-width: 360px;
+}
+
+.navbar {
+    background-color: #800000;
+    color: white;
+}
+
+.page-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#operations {
+    background-color: rgb(230, 230, 230);
+}
+
+#operations button{
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#operations .vgap {
+    color:rgb(150, 150, 150);
+}
+
+#operations .label {
+    color:rgb(71, 71, 71);
+    font-size: 2;
+}
+
+#territoryEditor {
+    background-color: rgb(230, 230, 230);
+    border-radius: 5px;
+    min-height: 600px;
+    padding: 10px;
+}
+
+
+#territoryPreviewContent, #territoryTitle{
+    background-color: rgb(230, 230, 230);
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    font-size: 25px;
+    padding: 5px 20px;
+}
+
+#territoryPreviewContent{
+    font-size: 20px;
+    height: 150px;
+    resize: none;
+}
+
+#territoryEditor img{
+    width: 70%;
+}
+
+
+select {
+    border: 2px solid rgb(104, 104, 104);
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+
+#territoryPreviewContent:focus, #territoryTitle:focus, #territoryEditor:focus{
+    outline: none !important;
+    border:none;
+    box-shadow: 0px 5px 5px rgb(200, 200, 200);
+}
+
+#cover_container img{
+    height: 100px; width: 160px;
+}
+
+#addNewTagBtn{
+    border-radius: 6px; 
+    background-color:#ACDAEB; 
+    width:50%;
+    padding: 2px; 
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    height: 40px;
+    font-size: 25px;
+}
+
+#tags{
+    min-width: 100px;
+    text-align: center;
+}
+
+.checkTag{
+    display: inline-block;
+}
+
+#uploadCoverBtn{
+    border: 2px dashed rgba(200,200,200,0.8);
+    height: 100px; 
+    width: 160px; 
+}
+
+.btn-action:active{
+    transform: translateY(2px);
+    opacity: 0.8;
+}
+
+pre code.hljs{
+    background-color: antiquewhite;
+    padding: 2px 5px;
+    width: 90%;
+}
+
+
+pre code.hljs:focus{
+    outline: none !important;
+    border:none;
+    
+    box-shadow: 0px 5px 5px rgb(200, 200, 200);
+}
+
